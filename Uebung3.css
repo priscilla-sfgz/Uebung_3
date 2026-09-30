@@ -1,57 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --HG: #fff1f9;
-  --text: #2a0017;
+    --hell: #ffcfea;
+    --dunkel: rgb(82, 0, 34);
 
-  --zeile: 200px;
-  --abstand: 40px;      /* gap */
-  --tempo: 0.5s;        /* Dauer der Animation */
-
-  --schrift: "Raleway", sans-serif;
+    --zeile: 200px;
+    --abstand: 40px;
+    --schrift: "Raleway", sans-serif;
 }
 
 body {
-  margin: 0;
-  background: white;
-  color: var(--text);
-  font-family: var(--schrift);
-  font-size: 1rem;
-  line-height: 1.2rem;
+    margin: 0;
+    background: var(--dunkel);
+    color: var(--dunkel);
+    font-family: var(--schrift);
+    font-size: 1rem;
+    line-height: 1.2rem;
 }
 
 .head {
-  margin: 0 auto;
-  padding: 3rem 4rem;
+    margin: 0 auto;
+    padding: 0rem 4rem;
 }
 
 .head h1 {
-    font-size: 4rem;
-    color: #52002d;
-    font-family: "Spicy Rice", serif;
-    line-height: 2rem;
-    margin-bottom: 3rem;
+    font-size: 6rem;
+    color: var(--hell);
+    font-family: "Uncial Antiqua", system-ui;
+    line-height: 7rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.3rem;
 }
 
 .head p {
-    font-size: 2rem;
-    color: var(--text);
+    font-size: 1.5rem;
+    color: var(--hell);
     font-family: var(--schrift);
+    line-height: 2rem;
 }
 
 main {
     padding-bottom: 5rem;
 }
 
+/* Einstellungen der ganzen Galerie */
 .gallery {
+    padding-left: 4rem;
+    padding-right: 4rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 4fr 1fr 1fr 4fr 1fr;
-    gap: 0;
+    grid-template-rows: 2rem 4fr 1rem 1rem 2rem 4fr 1rem 1rem;
+    column-gap: 1.5rem;
 }
 
+/* Positionen der Bilder innerhalb der Zellen und Polaroid-Aufbau */
 figure {
-    background-color: var(--HG);
-    padding: 1rem 1rem 5rem 1rem;
+    background-color: var(--hell);
+    padding: 1rem 1rem 1.5rem 1rem;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(124, 124, 124, 0.651);
+}
+
+/* Einstellungen Bilder */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Erste Zeile Text von Figure */
+figure figcaption::first-line {
+    font-weight: 700;
+}
+
+/* Rest Text von Figure */
+figure figcaption {
+    font-size: 1rem;
+    color: var(--dunkel);
+    font-family: var(--schrift);
+    padding-top: 1rem;
+}
+
+
+/* Positionen der Bilder innerhalb des Gitters */
+.pic1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+
+}
+
+.pic2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+}
+
+.pic3 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+}
+
+.pic4 {
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+}
+
+.pic5 {
+    grid-column: 5 / 6;
+    grid-row: 2 / 4;
+}
+
+.pic6 {
+    grid-column: 1 / 2;
+    grid-row: 6 / 8;
+}
+
+.pic7 {
+    grid-column: 2 / 3;
+    grid-row: 6 / 8;
+}
+
+.pic8 {
+    grid-column: 3 / 4;
+    grid-row: 6 / 8;
+}
+
+.pic9 {
+    grid-column: 4 / 5;
+    grid-row: 6 / 8;
+}
+
+.pic10 {
+    grid-column: 5 / 6;
+    grid-row: 6 / 8;
+}
+
+/* Positionen der Bilder innerhalb des Gitters bei Hover*/
+.pic1:hover {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.pic2:hover {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.pic3:hover {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.pic4:hover {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
+
+.pic5:hover {
+    grid-column: 5 / 6;
+    grid-row: 1 / 3;
+}
+
+.pic6:hover {
+    grid-column: 1 / 2;
+    grid-row: 5 / 7;
+}
+
+.pic7:hover {
+    grid-column: 2 / 3;
+    grid-row: 5 / 7;
+}
+
+.pic8:hover {
+    grid-column: 3 / 4;
+    grid-row: 5 / 7;
+}
+
+.pic9:hover {
+    grid-column: 4 / 5;
+    grid-row: 5 / 7;
+}
+
+.pic10:hover {
+    grid-column: 5 / 6;
+    grid-row: 5 / 7;
 }
